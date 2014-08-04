@@ -1,0 +1,33 @@
+<form name="form" class="form-signup" role="form" ng-submit="submit(form)">
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" type="email" ng-model="user.email" name="formEmail">
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input id="password" type="password" ng-model="user.password" name="formPassword">
+  </div>
+
+  <div>
+    <label for="confirm-password">Confirm Password</label>
+    <input id="confirm-password" type="password" ng-model="user.passwordConfirm" name="formPasswordConfirm">
+  </div>
+
+  <div>
+    <label for="radio_buttons">Gender:</label>
+    <label>
+      <input type="radio" ng-model="user.gender" class="radio" name="radio_button" value="female"> Female
+    </label>
+    <label>
+      <input type="radio" ng-model="user.gender" class="radio" name="radio_button" value="male"> Male
+    </label>
+  </div>
+
+  <div>
+    <input class="button" type="submit" value="Submit">
+  </div>
+
+</form>
+

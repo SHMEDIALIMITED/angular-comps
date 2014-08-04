@@ -1,0 +1,27 @@
+<form name="form" class="form-login" role="form" ng-submit="submit(form)">
+
+  <div ng-if="error" class="error">{{error.message}}</div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" type="email" ng-model="credentials.email" name="formEmail">
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input id="password" type="password" ng-model="credentials.password" name="formPassword">
+  </div>
+
+  <div>
+    <label for="remember">
+      <input id="remember" name="formRemember" class="checkbox" type="checkbox" ng-model="credentials.rememberMe">Remember me.
+    </label>
+  </div>
+
+  <div>
+    <input class="button" type="submit" value="Submit">or<a href="/signup"> Signup</a>
+  </div>
+
+
+
+</form>
