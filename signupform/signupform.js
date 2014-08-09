@@ -12,6 +12,8 @@ angular.module('o8')
       controller: function($scope, $injector, $attrs, $location) {
 
         var service = $injector.get($attrs.service);
+        var path = $attrs.path;
+
 
         $scope.user = {
 
@@ -19,13 +21,12 @@ angular.module('o8')
 
 
         $scope.submit = function(form) {
-
           delete $scope.error;
-
           delete $scope.user.passwordConfirm;
+
           service.create($scope.user,
-            function (res) {
-              $location.path('/')
+            function (res) { 
+              $location.path(path);
             }, function (res) {
               $scope.error = res;
             })
